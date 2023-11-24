@@ -1,4 +1,4 @@
-package com.example.orgs
+package com.example.orgs.ui.activity
 
 import android.app.Activity
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.os.PersistableBundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
+import com.example.orgs.R
+import com.example.orgs.recyclerviweradapter.ListaProdutosAdapter
 
 class MainActivity : Activity() {
 
@@ -22,6 +25,9 @@ class MainActivity : Activity() {
         qtd.text = "500"
         val data = findViewById<TextView>(R.id.data)
         data.text = "24/11/2023"
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recycle)
+        recyclerView.adapter = ListaProdutosAdapter()
 
     }
 
